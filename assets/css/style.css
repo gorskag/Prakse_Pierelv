@@ -83,7 +83,7 @@ h6 {
     height: 69px;
 }
 
-footer {
+#footer_copyright {
     display: flex;
 
     padding: 20px 150px;
@@ -92,11 +92,11 @@ footer {
     background: #EAE7F0;
 }
 
-footer p {
+#footer_copyright p {
     width: 50%;
 }
 
-footer p:nth-child(2){
+#footer_copyright p:nth-child(2){
     text-align: right;
 }
 
