@@ -1,17 +1,12 @@
 /* --- CSS reset + default styles --- */
 @font-face {
     font-family: WorkSans_Bold;
-    src: url('/assets/fonts/WorkSans-Bold.ttf') format('truetype');
+    src: url('../fonts/WorkSans-Bold.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: WorkSans_Bold;
-    src: url('/assets/fonts/WorkSans-Bold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: WorkSans_Bold;
-    src: url('/assets/fonts/WorkSans-Bold.ttf') format('truetype');
+    font-family: WorkSans_Regular;
+    src: url('../fonts/WorkSans-Regular.ttf') format('truetype');
 }
 
 *, p {
@@ -19,12 +14,29 @@
     padding: 0;
 }
 
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color:#786EC6;
+}
+
 html, body {
     height: 100%;
     scroll-behavior: smooth;
+
+    font-family: 'WorkSans_Regular';
+    color: #5C616E;
 }
 
-h1, h2, h3, h4, h5 {
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
     font-family: 'WorkSans_Bold';
     color: #35373D;
     margin: 0;
@@ -66,38 +78,86 @@ h6 {
     /* identical to box height, or 36px */
 }
 
-/* --- */
+/* --- Media queries for dev --- */
 
-/* --- Main piere.lv --- */
+/* Laptop */
+@media screen and (max-width: 1024px) {
 
-#piere_main {
-    min-height: 100%;
-    margin-bottom: -69px;
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+
+}
+
+/* Mobile L */
+@media screen and (max-width: 425px) {
+
+}
+
+/* Mobile S */
+@media screen and (max-width: 320px) {
+
 }
 
 /* --- Header piere.lv --- */
 
+
+
 /* --- Footer piere.lv --- */
 
-#piere_footer_divider {
-    height: 69px;
+#piere_footer {
+    flex-shrink: 0;
+    height: auto;
+
+    background: #FCFAFF;
+}
+
+#footer_contacts {
+    padding: 172px 150px 50px;
+    height: auto;
 }
 
 #footer_copyright {
     display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
 
     padding: 20px 150px;
-    height: 69px;
+    height: auto;
+
+    gap: 16px;
 
     background: #EAE7F0;
+
+    font-size: 18px;
+    line-height: 180%;
+    /* or 32px */
+
+    color: #35373D;
 }
 
-#footer_copyright p {
-    width: 50%;
+@media screen and (max-width: 1024px) {
+    #footer_copyright { 
+        padding: 18px 40px; 
+    }
 }
 
-#footer_copyright p:nth-child(2){
-    text-align: right;
+@media screen and (max-width: 425px) {
+    #footer_copyright {
+        padding: 32px 27px;
+
+        font-size: 16px;
+        line-height: 180%;
+        /* identical to box height, or 29px */
+    }
+}
+
+/* --- Main piere.lv --- */
+
+#piere_main {
+    flex: 1 0 auto;
 }
 
 /* --- First section --- */
