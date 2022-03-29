@@ -19,38 +19,9 @@
     src: url('../fonts/WorkSans-SemiBold.ttf') format('truetype');
 }
 
-*, p {
+*, p, ul {
     margin: 0;
     padding: 0;
-}
-
-p {
-    font-size: 18px;
-    line-height: 180%;
-    /* or 32px */
-}
-
-@media screen and (max-width: 425px) {
-    p {
-        font-size: 16px;
-        line-height: 180%;
-        /* or 29px */
-    }
-}
-
-a, a:hover, a:focus, a:active {
-    text-decoration: none;
-    color: inherit;
-}
-
-a:hover {
-    color:#786EC6;
-}
-
-.btn:active, .btn:focus {
-    background: none;
-    box-shadow: none;
-    border: none;
 }
 
 html, body {
@@ -146,6 +117,35 @@ h6 {
     }
 }
 
+p {
+    font-size: 18px;
+    line-height: 180%;
+    /* or 32px */
+}
+
+@media screen and (max-width: 425px) {
+    p {
+        font-size: 16px;
+        line-height: 180%;
+        /* or 29px */
+    }
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color:#786EC6;
+}
+
+.btn:active, .btn:focus {
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+
 /* --- Media queries for dev --- */
 
 /* Laptop */
@@ -168,11 +168,138 @@ h6 {
 
 }
 
-/* --- Header piere.lv --- */
+/* ------ Header Piere ------ */
 
+#piere_header {
+    display: grid;
+    align-items: center;
 
+    padding: 40px 150px;
+    height: auto;
+}
 
-/* ------ Footer piere.lv ------ */
+@media screen and (max-width: 1024px) {
+    #piere_header {
+        padding: 40px 40px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #piere_header {
+        padding: 40px 25px;
+    }
+}
+
+/* --- Logo --- */
+
+.header_logo {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.piere_logo {
+    font-family: 'Gilroy_ExtraBold';
+    line-height: 44px;
+}
+
+.piere_logo a:hover {
+    color: #35373D;
+}
+
+@media screen and (max-width: 425px) {
+    .piere_logo {
+        line-height: 44px;
+    }
+}
+
+/* --- Header navigation --- */
+
+#header_links {
+    grid-row: 1;
+    grid-column: 3;
+}
+
+@media screen and (max-width: 1024px) {
+    #header_links {
+        display: none;
+    }
+}
+
+#header_links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    list-style-type: none;
+
+    font-family: 'WorkSans_Regular';
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #1B1B1B;
+}
+
+#header_links ul li {
+    position: relative;
+}
+
+#header_links ul li.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 50%;
+    height: 3px;
+    background-color: #786EC6;
+    border-radius: 8px;
+}
+
+/* --- Header form --- */
+
+.header_form {
+    grid-row: 1;
+    grid-column: 4;
+
+    justify-self: center;
+}
+
+.header_form .btn {
+    margin: 0;
+    padding: 20px 44px;
+
+    width: 182px;
+    height: 60px;
+
+    font-family: 'WorkSans_SemiBold';
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+
+    background: #786EC5;
+    border-radius: 56px;
+    box-shadow: 0px 8px 15px rgba(120, 110, 198, 0.3);
+
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 425px) {
+    .header_form .btn {
+        padding: 13px 25px;
+    
+        width: 151px;
+        height: 45px;
+    
+        font-size: 16px;
+        line-height: 19px;
+        /* identical to box height */
+    }
+}
+
+.header_form .btn:hover {
+    background: #867cd4;
+}
+
+/* ------ Footer Piere ------ */
 
 #piere_footer {
     flex-shrink: 0;
@@ -227,20 +354,10 @@ h6 {
     color: #786EC6;
 }
 
-#footer_contacts div h3 {
-    font-family: 'Gilroy_ExtraBold';
-    line-height: 44px;
-}
-
 @media screen and (max-width: 425px) {
     #footer_contacts_map {
         font-size: 16px;
         line-height: 180%;
-    }
-
-    #footer_contacts div h3 {
-        line-height: 44px;
-    
     }
 }
 
@@ -327,10 +444,12 @@ h6 {
     }
 }
 
-/* --- Main piere.lv --- */
+/* ------ Main Piere ------ */
 
 #piere_main {
     flex: 1 0 auto;
+
+    background: linear-gradient(194.37deg, #FCFBFF 5.7%, rgba(251, 250, 254, 0) 26.42%), linear-gradient(99.2deg, rgba(248, 247, 255, 0.4) 1.7%, rgba(245, 243, 255, 0) 56.37%, rgba(228, 224, 244, 0.02911) 70.62%, rgba(248, 247, 255, 0.4) 97.69%);
 }
 
 /* --- First section --- */
