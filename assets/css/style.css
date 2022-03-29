@@ -1,5 +1,10 @@
 /* --- CSS reset + default styles --- */
 @font-face {
+    font-family: Gilroy_ExtraBold;
+    src: url('../fonts/Gilroy-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
     font-family: WorkSans_Bold;
     src: url('../fonts/WorkSans-Bold.ttf') format('truetype');
 }
@@ -9,9 +14,28 @@
     src: url('../fonts/WorkSans-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: WorkSans_SemiBold;
+    src: url('../fonts/WorkSans-SemiBold.ttf') format('truetype');
+}
+
 *, p {
     margin: 0;
     padding: 0;
+}
+
+p {
+    font-size: 18px;
+    line-height: 180%;
+    /* or 32px */
+}
+
+@media screen and (max-width: 425px) {
+    p {
+        font-size: 16px;
+        line-height: 180%;
+        /* or 29px */
+    }
 }
 
 a, a:hover, a:focus, a:active {
@@ -21,6 +45,12 @@ a, a:hover, a:focus, a:active {
 
 a:hover {
     color:#786EC6;
+}
+
+.btn:active, .btn:focus {
+    background: none;
+    box-shadow: none;
+    border: none;
 }
 
 html, body {
@@ -78,6 +108,44 @@ h6 {
     /* identical to box height, or 36px */
 }
 
+@media screen and (max-width: 425px) {
+    h1 {
+        font-size: 44px;
+        line-height: 135%;
+        /* or 59px */
+    }
+    
+    h2 {
+        font-size: 36px;
+        line-height: 135%;
+        /* or 49px */
+    }
+    
+    h3 {
+        font-size: 28px;
+        line-height: 150%;
+        /* identical to box height, or 42px */
+    }
+    
+    h4 {
+        font-size: 24px;
+        line-height: 150%;
+        /* identical to box height, or 36px */
+    }
+    
+    h5 {
+        font-size: 20px;
+        line-height: 123.8%;
+        /* identical to box height, or 25px */
+    }
+    
+    h6 {
+        font-size: 20px;
+        line-height: 150%;
+        /* identical to box height, or 30px */
+    }
+}
+
 /* --- Media queries for dev --- */
 
 /* Laptop */
@@ -104,7 +172,7 @@ h6 {
 
 
 
-/* --- Footer piere.lv --- */
+/* ------ Footer piere.lv ------ */
 
 #piere_footer {
     flex-shrink: 0;
@@ -113,10 +181,115 @@ h6 {
     background: #FCFAFF;
 }
 
+/* --- Footer contacts --- */
+
 #footer_contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    gap: 44px;
+
     padding: 172px 150px 50px;
     height: auto;
 }
+
+@media screen and (max-width: 1024px) {
+    #footer_contacts { 
+        padding: 177px 40px 50px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #footer_contacts {
+        flex-direction: column;
+    
+        padding: 278px 25px 30px;
+    }
+}
+
+#footer_contacts div p:nth-child(2) {
+    margin-top: 14px;
+}
+
+@media screen and (max-width: 425px) {
+    #footer_contacts div p:nth-child(2) {
+        margin-top: 16px;
+    }
+}
+
+#footer_contacts_map {
+    padding: 0;
+    border: 0;
+
+    font-family: 'WorkSans_SemiBold';
+    color: #786EC6;
+}
+
+#footer_contacts div h3 {
+    font-family: 'Gilroy_ExtraBold';
+    line-height: 44px;
+}
+
+@media screen and (max-width: 425px) {
+    #footer_contacts_map {
+        font-size: 16px;
+        line-height: 180%;
+    }
+
+    #footer_contacts div h3 {
+        line-height: 44px;
+    
+    }
+}
+
+/* --- Footer contacts --- */
+
+#footer_map {
+    display: none;
+
+    height: 500px;
+}
+
+#footer_map iframe {
+    width: 100%;
+    height: 500px;
+
+    border: none;
+}
+
+@media screen and (max-width: 1024px) {
+    #footer_map {
+        height: 400px;
+    }
+    
+    #footer_map iframe {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #footer_map {
+        height: 300px;
+    }
+    
+    #footer_map iframe {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #footer_map {
+        height: 500px;
+    }
+    
+    #footer_map iframe {
+        height: 500px;
+    }
+}
+
+/* --- Footer copyright --- */
 
 #footer_copyright {
     display: flex;
