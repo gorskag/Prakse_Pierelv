@@ -19,6 +19,11 @@
     src: url('../fonts/WorkSans-SemiBold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: WorkSans_Light;
+    src: url('../fonts/WorkSans-Light.ttf') format('truetype');
+}
+
 *, p, ul {
     margin: 0;
     padding: 0;
@@ -144,28 +149,6 @@ a:hover {
     background: none;
     box-shadow: none;
     border: none;
-}
-
-/* --- Media queries for dev --- */
-
-/* Laptop */
-@media screen and (max-width: 1024px) {
-
-}
-
-/* Tablet */
-@media screen and (max-width: 768px) {
-
-}
-
-/* Mobile L */
-@media screen and (max-width: 425px) {
-
-}
-
-/* Mobile S */
-@media screen and (max-width: 320px) {
-
 }
 
 /* ------ Header Piere ------ */
@@ -449,8 +432,189 @@ a:hover {
 #piere_main {
     flex: 1 0 auto;
 
-    background: linear-gradient(194.37deg, #FCFBFF 5.7%, rgba(251, 250, 254, 0) 26.42%), linear-gradient(99.2deg, rgba(248, 247, 255, 0.4) 1.7%, rgba(245, 243, 255, 0) 56.37%, rgba(228, 224, 244, 0.02911) 70.62%, rgba(248, 247, 255, 0.4) 97.69%);
+    padding: 0 150px;
+}
+
+@media screen and (max-width: 1024px) {
+    #piere_main {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #piere_main {
+        padding: 0 20px;
+    }
 }
 
 /* --- First section --- */
 
+#main_testblock {
+    margin: 40px 0;
+}
+
+/* --- Widget form section --- */
+
+#main_widget_form_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+
+    position: relative;
+    z-index: 1;
+    margin-bottom: -100px;
+    height: 200px;
+    width: 100%;
+
+    background: #786EC6;
+    border-radius: 35px;
+    box-shadow: 0px 8px 15px rgba(120, 110, 198, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+    #main_widget_form_wrapper {
+        height: 390px;
+        max-width: 378px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #main_widget_form_wrapper {
+        margin-bottom: -195px;
+    }
+}
+
+#widget_form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding: 10px 10px;
+    width: 100%;
+
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    #widget_form {
+        flex-direction: column;
+        width: unset;
+    }
+}
+
+.widget_form_text {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    .widget_form_text {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .widget_form_text {
+        gap: 20px;
+
+        width: 100%;
+    }
+}
+
+.widget_form_text div:nth-child(1) {
+    margin-top: 4px;
+}
+
+.widget_form_text div img {
+    width: 35px;
+    height: 35px;
+}
+
+.widget_form_text h3 {
+    line-height: 123.8%;
+    /* identical to box height, or 45px */
+    color: white;
+}
+
+@media screen and (max-width: 1024px) {
+    .widget_form_text h3 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .widget_form_text h3 {
+        font-size: 28px;
+    }
+}
+
+.widget_form_text p {
+    font-family: 'WorkSans_Light';
+    font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+    .widget_form_text p {
+        font-size: 20px;
+        line-height: 180%;
+        /* identical to box height, or 36px */
+    }
+}
+
+#widget_form div .btn {
+    margin: 0;
+    padding: 20px 44px 19px;
+
+    width: auto;
+    height: auto;
+
+    font-family: 'WorkSans_SemiBold';
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+
+    border: 2px solid white;
+    border-radius: 56px;
+
+    color: #FFFFFF;
+}
+
+#widget_form div .btn:hover {
+    background: #867cd4;
+}
+
+
+
+
+
+
+
+
+
+/* --- Media queries for dev --- */
+
+/* Laptop */
+@media screen and (max-width: 1024px) {
+
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+
+}
+
+/* Mobile L */
+@media screen and (max-width: 425px) {
+
+}
+
+/* Mobile S */
+@media screen and (max-width: 320px) {
+
+}
