@@ -136,6 +136,14 @@ p {
     }
 }
 
+@media screen and (max-width: 375px) {
+    p {
+        font-size: 16px;
+        line-height: 180%;
+        /* or 29px */
+    }
+}
+
 a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
@@ -471,7 +479,7 @@ a:hover {
 
 @media screen and (max-width: 425px) {
     #main_widget_form {
-        padding: 0 40px;
+        padding: 0 25px;
     }
 }
 
@@ -634,7 +642,7 @@ a:hover {
 
 @media screen and (max-width: 425px) {
     #main_section_two {
-        padding: 278px 40px 96px;
+        padding: 278px 25px 96px;
     }
 }
 
@@ -657,23 +665,25 @@ a:hover {
     flex-direction: column;
     gap: 22px;
 
-    margin-left: 40px;
+    margin-left: auto;
+    margin-right: auto;
     width: 44%;
+    max-width: 470px;
 }
 
 @media screen and (max-width: 1024px) {
     #section_two_widgets {
         gap: 15px;
 
-        margin-left: 25px;
+        /* margin-left: 25px; */
     }
 }
 
 @media screen and (max-width: 768px) {
     #section_two_widgets {
         margin-top: 32px;
-        margin-left: 0;
-        width: auto;
+        /* margin-left: 0; */
+        width: 100%;
     }
 }
 
@@ -701,6 +711,16 @@ a:hover {
     margin: 14px 89px 14px 45px;
 }
 
+@media screen and (max-width: 1200px) {
+    .st_widget {
+        margin: 12px 18px 12px 55px;
+    }
+    
+    .st_widget_wrapper:nth-child(2) .st_widget {
+        margin: 12px 45px 12px 18px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .st_widget {
         margin: 14px 36px 14px 64px;
@@ -709,6 +729,41 @@ a:hover {
     .st_widget_wrapper:nth-child(2) .st_widget {
         margin: 14px 67px 14px 24px;
     }
+}
+
+@media screen and (max-width: 900px) {
+    .st_widget {
+        margin: 14px 24px 14px 54px;
+    }
+    
+    .st_widget_wrapper:nth-child(2) .st_widget {
+        margin: 14px 54px 14px 24px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .st_widget {
+        margin: 12px 26px 12px 54px;
+    }
+    
+    .st_widget_wrapper:nth-child(2) .st_widget {
+        margin: 12px 47px 12px 14px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .st_widget {
+        margin: 10px 14px 10px 36px;
+    }
+    
+    .st_widget_wrapper:nth-child(2) .st_widget {
+        margin: 10px 36px 10px 12px;
+    }
+}
+
+.st_widget img {
+    width: 40px;
+    height: 40px;
 }
 
 .st_widget_text{
@@ -739,6 +794,18 @@ a:hover {
 
     .st_widget_text p{
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .st_widget_text h3{
+        font-size: 24px;
+        line-height: 28px;
+        /* identical to box height */
+    }
+
+    .st_widget_text p{
+        font-size: 16px;
     }
 }
 
