@@ -823,11 +823,153 @@ a:hover {
     background: linear-gradient(87.33deg, #786EC6 3.39%, #F65868 107.93%);
 }
 
+/* --- Third section --- */
 
+#main_section_three {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
 
+    padding: 96px 150px;
 
+    background: #FCFAFF;
+}
 
+@media screen and (max-width: 1024px) {
+    #main_section_three {
+        padding: 96px 40px;
+    }
+}
 
+@media screen and (max-width: 425px) {
+    #main_section_three {
+        padding: 96px 25px;
+    }
+}
+
+.st_card {
+    padding: 28px 44px;
+
+    background: #FFFFFF;
+    border-radius: 40px;
+    box-shadow: 1px 1px 30px rgba(59, 51, 124, 0.09);
+    /* opacity: 0.09;
+    filter: blur(30px); */
+}
+
+@media screen and (max-width: 1024px) {
+    .st_card {
+        padding: 28px 32px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .st_card {
+        padding: 24px 24px;
+    }
+}
+
+.st_card h4 {
+    display: inline;
+}
+
+.st_card p {
+    margin-bottom: 25px;
+
+    font-size: 24px;
+    line-height: 180%;
+    /* or 43px */
+}
+
+@media screen and (max-width: 1024px) {
+    .st_card p {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .st_card p {
+        margin-bottom: 10px;
+    
+        font-size: 18px;
+    }
+}
+
+.st_card p b{
+    font-family: 'WorkSans_Bold';
+    color: #786EC6;
+}
+
+.st_card summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    height: auto;
+
+    list-style-type: none;
+}
+
+.st_card summary::-webkit-details-marker {
+    display: none;
+}
+
+.st_card summary::after {
+
+    content: url('../img/section_three_card_summary.png');
+}
+
+.st_card[open] summary::after {
+    content: url('../img/section_three_card_summary_open.png');
+}
+
+.st_card ul {
+    column-count: 2;
+    column-gap: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .st_card ul {
+        column-count: 1;
+        column-gap: 0;
+    }
+}
+
+.st_card ul li{
+    margin-left: 59px;
+    margin-bottom: 22px;
+
+    list-style-type: none;
+    position: relative; 
+    
+
+    font-size: 18px;
+    line-height: 180%;
+    /* or 32px */
+}
+
+@media screen and (max-width: 768px) {
+    .st_card ul li{
+        margin-left: 47px;
+        margin-bottom: 14px;
+        
+        font-size: 16px;
+    }
+}
+
+.st_card ul li::before {
+    content: url('../img/section_three_card_list.png');
+    position: absolute;
+    left: -59px;
+    font-size: 43px;
+    line-height: normal;
+}
+
+@media screen and (max-width: 768px) {
+    .st_card ul li::before {
+        left: -47px;
+    }
+}
 
 /* --- Media queries for dev --- */
 
