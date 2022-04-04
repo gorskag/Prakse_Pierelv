@@ -13,3 +13,11 @@ $(document).ready(function() {
     //     $(this).addClass("active");
     // });
 });
+
+document.querySelectorAll('details').forEach((card,_,A)=>{
+    card.ontoggle = _ =>{ 
+        if(card.open) A.forEach(card_d =>{ 
+            if(card_d!=card) card_d.open=false 
+        })
+    }
+});
