@@ -575,6 +575,9 @@ a:hover {
 #websites_background {
     width: 550px;
     height: auto;
+
+    filter: drop-shadow(0px 8px 15px rgba(246, 88, 104, 0.4));
+    z-index: -1;
 }
 
 .websites_examples {
@@ -608,9 +611,17 @@ a:hover {
 
 #websites_options {
     height: 20px;
-
+    z-index: 2;
+    
     margin-top: -60px;
     margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #websites_options {
+        margin-top: -25px;
+        margin-right: 0;
+    }
 }
 
 .radio_options {
@@ -618,6 +629,52 @@ a:hover {
     
     cursor: pointer;
     font-size: 0;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type='radio']:checked:before {
+    width: 18px;
+    height: 18px;
+    border-radius: 15px;
+    position: absolute;
+    background: linear-gradient(180deg, #E6E6E6 0%, #C6C6C6 100%);
+    transform: rotate(-90deg);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #3DC01C;
+}
+
+input[type='radio']:after {
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 16px;
+    height: 16px;
+    border-radius: 15px;
+    position: relative;
+    background: linear-gradient(180deg, #E6E6E6 0%, #C6C6C6 100%);
+    transform: rotate(-90deg);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+input[type='radio']:checked:after {
+    width: 16px;
+    height: 16px;
+    border-radius: 15px;
+    position: relative;
+    background: #3DC01C;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #E6E6E6;
+    box-shadow: 0px 0px 14px rgb(61 192 28 / 68%);
 }
 
 #section_one_list_mobile {
