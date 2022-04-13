@@ -44,20 +44,20 @@
     <main id="piere_main">
 
       <!-- Section one -->
-      <div id="main_section_one">
+      <div id="main_section_hero">
 
-        <div id="section_one_text">
+        <div id="section_hero_text">
           <h1>Mājaslapu dizaineris</h1>
           <p>Apgūsti UI/UX dizainera profesiju reālos darba apstākļos profesionāļu uzraudzībā.</p>
 
-          <ul id="section_one_list">
+          <ul id="section_hero_list">
             <li>Reāli projekti</li>
             <li>Akreditēts sertifikāts</li>
             <li>Mentoru atbalsts</li>
           </ul>
         </div>
 
-        <div id="section_one_websites">
+        <div id="section_hero_websites">
 
           <div id="websites_wrapper">
             <img class="websites_examples" src="assets/img/section_one_website_1_copy.png" alt="Website preview">
@@ -67,22 +67,22 @@
           <div id="websites_options">
 
             <label class="radio_options">Website
-              <input type="radio" checked="checked" name="radio">
+              <input type="radio" checked="checked" name="website">
             </label>
 
             <label class="radio_options">Website
-              <input type="radio" name="radio">
+              <input type="radio" name="website">
             </label>
 
             <label class="radio_options">Website
-              <input type="radio" name="radio">
+              <input type="radio" name="website">
             </label>
 
           </div>
 
         </div>
 
-        <div id="section_one_list_mobile">
+        <div id="section_hero_list_mobile">
           <ul>
             <li>Reāli projekti</li>
             <li>Akreditēts sertifikāts</li>
@@ -227,8 +227,111 @@
 
       </div>
 
-      <!-- Certificate section -->
+      <!-- Mentor section -->
+      <div id="main_section_mentor">
+        <div id="mentor_widgets">
 
+          <div id="mentor_widgets_boxes">
+
+            <div class="mentor_widgets_wrapper mentor_widget_first">
+              <img src="assets/img/section_mentor_1.png" alt="Mentor icon">
+
+              <div class="mentor_widgets_text">
+                <p class="mentor_widgets_header"><b>Vārds Uzvārds</b><br>Vecākais UI/UX Dizaineris</p>
+                <p class="mentor_widgets_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+
+            </div>
+
+            <div class="mentor_widgets_wrapper mentor_widget_second">
+              <img src="assets/img/section_mentor_2.png" alt="Mentor icon">
+
+              <div class="mentor_widgets_text">
+                <p class="mentor_widgets_header"><b>Vārds Uzvārds</b><br>Vecākais UI/UX Dizaineris</p>
+                <p class="mentor_widgets_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+
+            </div>
+
+            <div class="mentor_widgets_wrapper mentor_widget_third">
+              <img src="assets/img/section_mentor_1.png" alt="Mentor icon">
+
+              <div class="mentor_widgets_text">
+                <p class="mentor_widgets_header"><b>test test</b><br>Vecākais UI/UX Dizaineris</p>
+                <p class="mentor_widgets_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+
+            </div>
+
+          </div>
+          <div id="mentor_widgets_buttons">
+
+            <label class="radio_options">Website
+              <input type="radio" checked="checked" name="mentor">
+            </label>
+
+            <label class="radio_options">Website
+              <input type="radio" name="mentor">
+            </label>
+
+            <label class="radio_options">Website
+              <input type="radio" name="mentor">
+            </label>
+
+          </div>
+
+        </div>
+        <div id="mentor_text">
+          <h2>Mentori</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident laboriosam beatae, blanditiis a exercitationem id quae doloribus ut natus velit, inventore tempore esse. Laudantium ipsa fugit nulla repellendus reiciendis excepturi?</p>
+          <button class="btn">
+            <span>Skatīt visus mentorus</span>
+          </button>
+        </div>
+        <div id="mentor_button">
+          <button class="btn">
+            <span>Skatīt visus mentorus</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Internship section -->
+
+      <div id="main_section_internship">
+        <h2>Mācību prakse 480h apjomā</h2>
+        <div id="internship_wrapper">
+
+          <div class="internship_block">
+            <h5>Pilna laika prakse</h5>
+            <p>8h dienā - 3 mēneši</p>
+            <button class="btn">
+              <span>Pieteikties</span>
+            </button>
+          </div>
+
+          <div class="internship_block">
+            <h5>Nepilna laika prakse</h5>
+            <p>4h dienā - 6 mēneši</p>
+            <button class="btn">
+              <span>Pieteikties</span>
+            </button>
+          </div>
+
+          <div class="internship_block">
+            <h5>Oficiālā skolas prakse</h5>
+            <p>Pēc nepieciešamības</p>
+            <button class="btn">
+              <span>Pieteikties</span>
+            </button>
+          </div>
+
+        </div>
+
+        <img id="internship_background_left" class="internship_background_icon" src="assets/img/section_internship_background_left.png" alt="Background icon">
+        <img id="internship_background_right" class="internship_background_icon" src="assets/img/section_internship_background_right.png" alt="Background icon">
+      </div>
+
+      <!-- Certificate section -->
       <div id="main_section_cert">
         <div id="cert_text">
           <h2>Sertifikāts</h2>
@@ -300,7 +403,7 @@
         </details>
 
         <div id="FAQ_button">
-          <button class="btn" >
+          <button class="btn">
             <span>Skatīt visus</span>
           </button>
         </div>
@@ -435,7 +538,7 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous">
-  </script>
+    </script>
     <!-- Custom JS -->
     <script async="false" type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsvuy1NEn_dI62TnFutTJEqEMAfNTDfpY&callback=initMap">
