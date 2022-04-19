@@ -29,7 +29,11 @@
     src: url('../fonts/WorkSans-Medium.ttf') format('truetype');
 }
 
-*, p, ul {
+* {
+    transition: 0.2s;
+}
+
+*, p, ul, ol {
     margin: 0;
     padding: 0;
 }
@@ -1564,6 +1568,93 @@ input[type='radio']:checked:after {
         bottom: 0;
         right: 0;
     }
+}
+
+/* --- Curriculum section --- */
+
+#main_section_curriculum {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+
+    padding: 96px 150px 96px;
+    background: #FCFAFF;
+}
+
+@media screen and (max-width: 1024px) {
+    #main_section_curriculum {
+        padding: 96px 40px 96px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #main_section_curriculum {
+        padding: 96px 25px 96px;
+    }
+}
+
+#main_section_curriculum h2 {
+    text-align: center;
+}
+
+.details_card_ordered {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    list-style: none;
+    counter-reset: item;
+}
+
+.details_card_ordered > li{
+    counter-increment: item;
+    position: relative;
+}
+
+.details_card_ordered > li::before{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 80px;
+    
+    content: counter(item) ".";
+    background: linear-gradient(270deg, #786EC6 0%, #F65868 100%);
+    border-radius: 60px 6px 60px 6px;
+
+    font-family: 'WorkSans_SemiBold';
+    font-size: 32px;
+    line-height: 150%;
+    /* identical to box height, or 48px */
+    text-align: center;
+    color: white;
+
+    position: absolute;
+    top: 30px;
+    left: -40px;
+    z-index: 2;
+}
+
+@media screen and (max-width: 1024px) {
+    .details_card_ordered > li::before{
+        top: -24px;
+        left: 0px;
+    }
+}
+
+
+@media screen and (min-width: 1025px) {
+    .details_card_one_col {
+        padding-left: 73px;
+    }
+}
+
+.details_card_bold {
+    font-family: 'WorkSans_Bold';
+}
+
+.details_card_one_col ul {
+    column-count: 1;
 }
 
 /* --- Certificate section --- */
