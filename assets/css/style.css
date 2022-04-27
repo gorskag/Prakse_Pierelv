@@ -1497,30 +1497,30 @@ input[type='radio']:checked:after {
 }
 
 .mentor_widget_first {
+    display: flex;
     order: 1;
 
     margin: unset;
 }
 
 .mentor_widget_second {
+    display: flex;
     order: 2;
 
     margin: 53px 0 -53px;
 }
 
 .mentor_widget_third {
-    order: 3;
-
     display: none;
+    order: 3;
 }
 
 @media screen and (max-width: 1024px) {
     .mentor_widget_second {
-        order: 2;
-    
-        margin: unset;
         display: none;
+        margin: unset;
     }
+
 }
 
 #mentor_widgets_buttons {
@@ -2116,8 +2116,12 @@ input[type='radio']:checked:after {
 }
 
 @media screen and (max-width: 1024px) {
-    .students_row:nth-child(n+2) {
+    .students_row {
         display: none;
+    }
+
+    .students_row.active_students_block {
+        display: flex;
     }
 }
 
@@ -2128,7 +2132,6 @@ input[type='radio']:checked:after {
 
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 
     padding: 20px 73px 20px 95px;
@@ -2152,7 +2155,8 @@ input[type='radio']:checked:after {
 
 @media screen and (max-width: 768px) {
     .students_name {
-        top: -122px;
+        top: unset;
+        bottom: 240px;
         left: -70px;
 
         padding: 20px 50px 20px 95px;
@@ -2226,13 +2230,15 @@ input[type='radio']:checked:after {
     }
 }
 
-.students_row:nth-child(2n){
-    justify-content: flex-start;
-}
-
-.students_row:nth-child(2n) > .students_name{
-    left: unset;
-    right: -58px;
+@media screen and (min-width: 1025px) {
+    .students_row:nth-child(2n){
+        justify-content: flex-start;
+    }
+    
+    .students_row:nth-child(2n) > .students_name{
+        left: unset;
+        right: -58px;
+    }   
 }
 
 #students_widgets_buttons  {
@@ -2344,8 +2350,12 @@ input[type='radio']:checked:after {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .graduates_block:nth-of-type(n+2) {
+    .graduates_block {
         display: none;
+    }
+
+    .graduates_block.active_graduates_block {
+        display: flex;
     }
 }
 
@@ -2485,6 +2495,139 @@ input[type='radio']:checked:after {
     margin-top: 52px;
 }
 
+/* --- Portfolio section --- */
+
+#main_section_portfolio {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    padding: 96px 150px;
+}
+
+@media screen and (max-width: 1024px) {
+    #main_section_portfolio {
+        padding: 96px 40px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #main_section_portfolio {
+        padding: 96px 25px;
+    }
+}
+
+#main_section_portfolio > h2 {
+    text-align: center;
+    margin-bottom: 44px;
+}
+
+#portfolio_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+
+    margin: 0 -583px;
+}
+
+@media screen and (max-width: 768px) {
+    #portfolio_row {
+        margin: unset;
+    }
+}
+
+.portfolio_arrow {
+    align-self: center;
+
+    max-width: 44px;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio_arrow {
+        display: none;
+    }
+}
+
+.portfolio_card {
+    overflow: hidden;
+
+    margin: 40px 0 22px;
+    max-width: 740px;
+
+    background: white;
+    border-radius: 40px;
+
+    -webkit-filter: grayscale(1) opacity(0.4) blur(2px) drop-shadow(0px 8px 15px rgba(59, 51, 124, 0.09));
+            filter: grayscale(1) opacity(0.4) blur(2px) drop-shadow(0px 8px 15px rgba(59, 51, 124, 0.09));
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio_card {
+        display: none;
+    }
+}
+
+.portfolio_card.active_card {
+    filter: drop-shadow(0px 8px 15px rgba(59, 51, 124, 0.09));
+    margin: unset;
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio_card.active_card {
+        display: block;
+
+    }
+}
+
+.portfolio_card_image {
+    position: relative;
+    top: -1px;
+    left: -1px;
+
+    width: 101%;
+    height: auto;
+    object-fit: cover;
+}
+
+.portfolio_card_text {
+    margin: 21px 28px 43px;
+}
+
+@media screen and (max-width: 1024px) {
+    .portfolio_card_text {
+        margin: 32px 28px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    #portfolio_options {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #portfolio_options {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+    
+        margin-top: 24px;
+    }
+}
+
+#main_section_portfolio > .btn {
+    margin-top: 52px;
+}
+
+@media screen and (max-width: 768px) {
+    #main_section_portfolio > .btn {
+        margin-top: 44px;
+    }
+}
+
 /* --- Bootcamp process section --- */
 
 #main_section_bootcamp_process {
@@ -2582,6 +2725,12 @@ input[type='radio']:checked:after {
 
 .active_block .flex_block_ol_arrow {
     display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .active_block .flex_block_ol_arrow {
+        display: none;
+    }
 }
 
 #main_section_bootcamp_process .grid_2 {
@@ -2737,8 +2886,12 @@ input[type='radio']:checked:after {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .team_block:nth-of-type(n+2) {
+    .team_block {
         display: none;
+    }
+
+    .team_block.active_team_block {
+        display: flex;
     }
 }
 
@@ -2853,8 +3006,19 @@ input[type='radio']:checked:after {
     content: url('../img/li_minus.png');
 }
 
+.li_plus.grid_2, .li_minus.grid_2 {
+    gap: 9px 15px;
+}
+
 .li_minus {
     margin-top: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .li_plus.grid_2, .li_minus.grid_2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
 }
 
 /* --- Certificate section --- */

@@ -260,7 +260,7 @@
               <img src="assets/img/section_mentor_1.png" alt="Mentor icon">
 
               <div class="mentor_widgets_text">
-                <p class="mentor_widgets_header"><b>test test</b><br>Vecākais UI/UX Dizaineris</p>
+                <p class="mentor_widgets_header"><b>test test</b><br>Test test</p>
                 <p class="mentor_widgets_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
 
@@ -270,15 +270,15 @@
           <div id="mentor_widgets_buttons">
 
             <label class="radio_options">Mentor
-              <input type="radio" checked="checked" name="mentor">
+              <input type="radio" checked="checked" name="mentor" value="mentor_1">
             </label>
 
             <label class="radio_options">Mentor
-              <input type="radio" name="mentor">
+              <input type="radio" name="mentor" value="mentor_2">
             </label>
 
             <label class="radio_options">Mentor
-              <input type="radio" name="mentor">
+              <input type="radio" name="mentor" value="mentor_3">
             </label>
 
           </div>
@@ -478,7 +478,7 @@
 
         <div id="students_wrapper">
 
-          <div class="students_row">
+          <div class="students_row active_students_block">
             <div class="students_name">
               <div class="students_name_wrapper">
 
@@ -548,15 +548,15 @@
         <div id="students_widgets_buttons">
 
           <label class="radio_options">Student
-            <input type="radio" checked="checked" name="student">
+            <input type="radio" checked="checked" name="student" value="student_1">
           </label>
 
           <label class="radio_options">Student
-            <input type="radio" name="student">
+            <input type="radio" name="student" value="student_2">
           </label>
 
           <label class="radio_options">Student
-            <input type="radio" name="student">
+            <input type="radio" name="student" value="student_3">
           </label>
 
         </div>
@@ -572,7 +572,7 @@
         <h2>Absolventi</h2>
         <div id="graduates_wrapper">
 
-          <div class="graduates_block">
+          <div class="graduates_block active_graduates_block">
             <img src="assets/img/section_graduates_1.png" alt="Graduate photo">
             <p class="bold_18">Vārds Uzvārds</p>
             <p class="medium_18">Dizaineris</p>
@@ -598,15 +598,15 @@
         <div id="graduates_widgets_buttons">
 
           <label class="radio_options">Graduate
-            <input type="radio" checked="checked" name="graduate">
+            <input type="radio" checked="checked" name="graduate" value="graduate_1">
           </label>
 
           <label class="radio_options">Graduate
-            <input type="radio" name="graduate">
+            <input type="radio" name="graduate" value="graduate_2">
           </label>
 
           <label class="radio_options">Graduate
-            <input type="radio" name="graduate">
+            <input type="radio" name="graduate" value="graduate_3">
           </label>
 
         </div>
@@ -650,6 +650,67 @@
         <!-- <button class="btn">
           <span>Skatīt visas</span>
         </button> -->
+
+      </div>
+
+      <!-- Portfolio section -->
+      <div id="main_section_portfolio">
+        <h2>Studentu portfolio</h2>
+
+        <div id="portfolio_row">
+
+          <div class="portfolio_card">
+            <img class="portfolio_card_image" src="assets/img/portfolio_card_1.png" alt="Student portfolio website">
+
+            <div class="portfolio_card_text">
+              <h3>Projekta nosaukums</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam ante ut massa scelerisque, at mattis lectus euismod.</p>
+            </div>
+          </div>
+
+          <img class="portfolio_arrow" src="assets/img/arrow_green_left.png" alt="Green left arrow">
+
+          <div class="portfolio_card active_card">
+            <img class="portfolio_card_image" src="assets/img/portfolio_card_1.png" alt="Student portfolio website">
+
+            <div class="portfolio_card_text">
+              <h3>Projekta nosaukums</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam ante ut massa scelerisque, at mattis lectus euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut ac leo a lorem elementum scelerisque.</p>
+            </div>
+          </div>
+
+          <img class="portfolio_arrow" src="assets/img/arrow_green_right.png" alt="Green right arrow">
+
+          <div class="portfolio_card">
+            <img class="portfolio_card_image" src="assets/img/portfolio_card_1.png" alt="Student portfolio website">
+
+            <div class="portfolio_card_text">
+              <h3>Projekta nosaukums</h3>
+              <p>Ut ac leo a lorem elementum scelerisque.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="portfolio_options">
+
+          <label class="radio_options">Portfolio
+            <input type="radio" name="portfolio" value="portfolio_1">
+          </label>
+
+          <label class="radio_options">Portfolio
+            <input type="radio" name="portfolio" value="portfolio_2" checked="checked">
+          </label>
+
+          <label class="radio_options">Portfolio
+            <input type="radio" name="portfolio" value="portfolio_3">
+          </label>
+
+        </div>
+
+        <button class="btn">
+          <span>Skatīt visus</span>
+        </button>
 
       </div>
 
@@ -771,7 +832,7 @@
         <h2>Mūsu komanda</h2>
         <div id="team_wrapper">
 
-          <div class="team_block">
+          <div class="team_block active_team_block">
             <img src="assets/img/team_1.png" alt="Team member photo">
             <p class="bold_18">Vārds Uzvārds</p>
             <p class="medium_18">CEO</p>
@@ -818,15 +879,15 @@
         <div id="team_widgets_buttons">
 
           <label class="radio_options">Team
-            <input type="radio" checked="checked" name="team">
+            <input type="radio" checked="checked" name="team" value="team_1">
           </label>
 
           <label class="radio_options">Team
-            <input type="radio" name="team">
+            <input type="radio" name="team" value="team_2">
           </label>
 
           <label class="radio_options">Team
-            <input type="radio" name="team">
+            <input type="radio" name="team" value="team_3">
           </label>
 
         </div>
